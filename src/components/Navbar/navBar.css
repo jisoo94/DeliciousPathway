@@ -1,0 +1,50 @@
+.NavBar {
+  display: flex;
+  height: 100px;
+  margin-top: 10px;
+  justify-content: space-around;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__logo p {
+  margin-top: 10px;
+  color: #171717;
+  font-size: 38px;
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav__menu {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  color: #626262;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav__menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.nav__menu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #ff4141;
+}
