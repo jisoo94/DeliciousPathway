@@ -113,6 +113,12 @@ img {
   height: auto;
 }
 
+.main {
+  padding-top: 120px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 /* REUSABLE CSS CLASSES */
 /* .section {
   padding: 6rem 0 2rem;
@@ -189,6 +195,11 @@ img {
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
+  .main {
+    padding-top: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   /* body {
     margin: 0 0 var(--header-height) 0;
   }

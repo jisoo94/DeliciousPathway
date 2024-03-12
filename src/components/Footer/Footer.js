@@ -6,10 +6,6 @@ const Footer = () => {
     <footer className="Footer">
       <div className="contents">
         <p>&copy; 2024 Delicious Pathway. All rights reserved.</p>
-        <p>&copy; 2024 Delicious Pathway. All rights reserved.</p>
-        <p>&copy; 2024 Delicious Pathway. All rights reserved.</p>
-        <p>&copy; 2024 Delicious Pathway. All rights reserved.</p>
-        <p>&copy; 2024 Delicious Pathway. All rights reserved.</p>
       </div>
     </footer>
   );
