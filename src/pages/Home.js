@@ -1,13 +1,13 @@
 import React from "react";
 import Carousels from "../components/Carousels/Carousels";
-import Email from "../components/Email/Email";
+import Contact from "../components/Contact/Contact";
 
 const Home = () => {
   return (
     <div className="mainHome">
       <Carousels showCarousel={true} />
       <Carousels showCarousel={false} />
-      <Email />
+      <Contact />
     </div>
   );
 };
