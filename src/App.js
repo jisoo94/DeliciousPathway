@@ -14,7 +14,22 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <div className="main">
-        <h1>home test</h1>
+        {/* <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p>
+        <p>askdkasjd</p> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/food" element={<Food />} />

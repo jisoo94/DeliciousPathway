@@ -30,7 +30,7 @@ const NavBar = () => {
           <Link className="nav-menu-list" to="/food">
             맛집
           </Link>
-          {menu === "food" ? <hr /> : <></>}
+          {/* {menu === "food" ? <hr /> : <></>} */}
         </li>
         <li
           onClick={() => {
@@ -40,7 +40,7 @@ const NavBar = () => {
           <Link className="nav-menu-list" to="/travel">
             여행지
           </Link>
-          {menu === "travel" ? <hr /> : <></>}
+          {/* {menu === "travel" ? <hr /> : <></>} */}
         </li>
         {/* <i
           className="uil uil-times nav__close"
