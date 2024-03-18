@@ -1,0 +1,26 @@
+const cityNames = [
+  { Seoul: "서울" },
+  { Busan: "부산" },
+  { Incheon: "인천" },
+  { Daegu: "대구" },
+  { Daejeon: "대전" },
+  { Gwangju: "광주" },
+  { Ulsan: "울산" },
+  { Sejong: "세종" },
+  { Suwon: "수원" },
+  { Yongin: "용인" },
+  { Changwon: "창원" },
+  { Ansan: "안산" },
+  { Anyang: "안양" },
+  { Bucheon: "부천" },
+  { Goyang: "고양" },
+  { Seongnam: "성남" },
+  { Pohang: "포항" },
+  { Jeonju: "전주" },
+  { Cheongju: "청주" },
+  { Cheonan: "천안" },
+  { Jeju: "제주" },
+  { JejuCity: "제주시" },
+];
+
+export default cityNames;
