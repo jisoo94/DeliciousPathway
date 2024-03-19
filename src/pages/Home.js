@@ -7,7 +7,9 @@ import Weather from "../components/Weather/Weather";
 const Home = () => {
   return (
     <div className="mainHome">
+      <h1>맛집 탐방</h1>
       <Carousels showCarousel={true} />
+      <h1>여행지 탐방</h1>
       <Carousels showCarousel={false} />
       <div className="subHome">
         <Contact />

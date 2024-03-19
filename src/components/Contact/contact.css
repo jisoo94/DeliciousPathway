@@ -3,7 +3,11 @@
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
   column-gap: 6rem;
-  padding-top: 10px;
+  padding: 20px;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 16px;
+  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .contact__title {

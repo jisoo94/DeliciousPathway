@@ -12,31 +12,19 @@ function App() {
   return (
     // <infoStateContext.Provider value={""}>
     <BrowserRouter>
-      <NavBar />
-      <div className="main">
-        {/* <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p>
-        <p>askdkasjd</p> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/food" element={<Food />} />
-          <Route path="/travel" element={<Travel />} />
-        </Routes>
+      <div className="container_box">
+        <NavBar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/food" element={<Food />} />
+            <Route path="/travel" element={<Travel />} />
+          </Routes>
+        </div>
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
-      <Footer />
     </BrowserRouter>
     // </infoStateContext.Provider>
   );

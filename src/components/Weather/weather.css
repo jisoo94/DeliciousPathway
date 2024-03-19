@@ -1,0 +1,29 @@
+.weather_container {
+  padding: 20px;
+  border: 1px solid rgb(218, 218, 218);
+  text-align: center; /* 부모 요소를 통해 하위 요소 중앙 정렬 */
+  border-radius: 16px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(212, 240, 252),
+    rgb(233, 242, 248)
+  );
+  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.1);
+}
+
+.weather_item {
+  display: inline-block; /* 요소를 가로로 배치 */
+}
+
+.h2_item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .weather_container {
+    margin-top: 50px;
+  }
+}

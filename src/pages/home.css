@@ -1,8 +1,20 @@
+h1 {
+  text-align: center;
+}
 .subHome {
   display: flex;
-  margin: 10px 0px;
+  margin: 50px 0px;
   padding: 20px 0px;
-  background-color: skyblue;
+  /* background-color: skyblue; */
   justify-content: space-evenly;
   align-items: center;
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .subHome {
+    display: block;
+    margin: 30px;
+    padding: 20px;
+  }
 }

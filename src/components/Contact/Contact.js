@@ -18,7 +18,7 @@ const Contact = () => {
   };
   return (
     <section className="contact section" id="contact">
-      <div className="contact__container container grid">
+      <div className="contact__container">
         <div className="contact__content">
           <h3 className="contact__title">문의 글을 남겨주세요!</h3>
 

@@ -1,9 +1,23 @@
-.Footer {
-  width: 100%;
+.doc_footer {
   /* position: absolute; */
-  bottom: 0;
+  /* bottom: 0; */
+  border-top: 1px solid #888;
+  margin-bottom: 30px;
   padding: 10px;
-  background-color: #333;
-  color: #fff;
+  color: #888;
   text-align: center;
+}
+
+.wrap_info {
+  display: inline-flex;
+  margin-top: 50px;
+
+  padding-right: 20px;
+  text-decoration: none;
+  color: red;
+}
+
+.footer-link {
+  color: #888;
+  text-decoration: none;
 }
