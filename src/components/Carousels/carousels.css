@@ -3,17 +3,18 @@
   justify-content: center;
   align-items: center;
   padding: 16px;
-  /* background-color: pink; */
+  width: 30%;
+  /* height: 300px; */
 }
 
-.carousel__contents {
-  width: 80%;
+/* .carousel__contents {
+  width: 50%;
   height: auto;
-}
+} */
 
-.carousel__image {
-  height: 400px;
-}
+/* .carousel__image {
+  height: auto;
+} */
 
 /* medium devices */
 @media screen and (max-width: 768px) {

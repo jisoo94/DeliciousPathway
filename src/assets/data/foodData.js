@@ -1,4 +1,7 @@
-import img from "../food.jpg";
+import img from "../foods/food.jpg";
+import img2 from "../foods/food2.jpg";
+import img3 from "../foods/food3.jpg";
+import img4 from "../foods/food4.jpg";
 
 const foodData = [
   {
@@ -10,25 +13,19 @@ const foodData = [
   {
     label: "Image 2",
     alt: "image2",
-    url: img,
+    url: img2,
   },
 
   {
     label: "Image 3",
     alt: "image3",
-    url: img,
+    url: img3,
   },
 
   {
     label: "Image 4",
     alt: "image4",
-    url: img,
-  },
-
-  {
-    label: "Image 5",
-    alt: "image5",
-    url: img,
+    url: img4,
   },
 ];
 
