@@ -5,8 +5,36 @@
   text-align: center;
   margin: 30px;
 }
-
+.img_fix {
+  height: auto;
+}
 .card_img {
   height: 200px;
   width: 200px;
+}
+
+.card_text {
+  height: 150px;
+}
+
+/* For medium devices */
+@media screen and (max-width: 968px) {
+  /* h1 {
+    font-size: var(--h3-font-size);
+  }
+
+  P {
+    font-size: var(--small-font-size);
+  } */
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .card_text {
+    height: auto;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
 }

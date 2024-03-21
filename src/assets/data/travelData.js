@@ -1,4 +1,4 @@
-import img from "../img1.jpg";
+import img from "../img.jpg";
 
 const travelData = [
   {

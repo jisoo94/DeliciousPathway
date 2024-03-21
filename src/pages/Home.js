@@ -8,6 +8,7 @@ import fall from "../assets/travels/fall.jpg";
 import food from "../assets/travels/food.jpg";
 import ocean from "../assets/travels/ocean.jpg";
 import seoul from "../assets/travels/seoul.jpg";
+import ScrollToTopButton from "../components/Utils/ScrollToTopButton";
 
 const Home = () => {
   return (
@@ -69,6 +70,9 @@ const Home = () => {
       <div className="subHome">
         <Contact />
         <Weather />
+      </div>
+      <div className="topButton">
+        <ScrollToTopButton />
       </div>
     </div>
   );
