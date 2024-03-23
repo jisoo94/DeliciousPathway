@@ -1,10 +1,7 @@
 .doc_footer {
-  /* position: absolute; */
-  /* bottom: 0; */
   border-top: 1px solid var(--border-grey-color);
   margin-bottom: 30px;
   padding: 10px;
-
   text-align: center;
   background-color: var(--brown-color);
 }
