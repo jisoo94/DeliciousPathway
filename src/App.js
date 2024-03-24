@@ -6,6 +6,7 @@ import Food from "./pages/Food";
 import Travel from "./pages/Travel";
 import NavBar from "./components/Navbar/NavBar";
 import Footer from "./components/Footer/Footer";
+import ScrollToTopButton from "./components/Utils/ScrollToTopButton";
 
 // export const infoStateContext = React.createContext();
 function App() {
@@ -24,6 +25,9 @@ function App() {
         <div className="footer">
           <Footer />
         </div>
+      </div>
+      <div className="topButton">
+        <ScrollToTopButton />
       </div>
     </BrowserRouter>
     // </infoStateContext.Provider>

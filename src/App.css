@@ -142,6 +142,12 @@ img {
   height: 30px;
 }
 
+.topButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
 /* REUSABLE CSS CLASSES */
 /* .section {
   padding: 6rem 0 2rem;

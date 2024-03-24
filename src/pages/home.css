@@ -48,12 +48,6 @@
   align-items: center;
 }
 
-.topButton {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-}
-
 @media screen and (max-width: 968px) {
   h1 {
     font-size: var(--h3-font-size);

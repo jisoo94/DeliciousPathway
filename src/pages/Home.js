@@ -71,9 +71,6 @@ const Home = () => {
         <Contact />
         <Weather />
       </div>
-      <div className="topButton">
-        <ScrollToTopButton />
-      </div>
     </div>
   );
 };
