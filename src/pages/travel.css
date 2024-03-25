@@ -1,0 +1,16 @@
+/* .data-wrap {
+  width: 70%;
+} */
+.data-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid var(--border-grey-color);
+  border-radius: 16px;
+  margin: 20px 0;
+}
+
+.data-text {
+  width: 100%;
+}

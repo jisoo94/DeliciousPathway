@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Food from "./pages/Food";
 import Travel from "./pages/Travel";
+import Map from "./pages/Map";
 import NavBar from "./components/Navbar/NavBar";
 import Footer from "./components/Footer/Footer";
 import ScrollToTopButton from "./components/Utils/ScrollToTopButton";
@@ -20,6 +21,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/food" element={<Food />} />
             <Route path="/travel" element={<Travel />} />
+            <Route path="/travel/map" element={<Map />} />
           </Routes>
         </div>
         <div className="footer">
