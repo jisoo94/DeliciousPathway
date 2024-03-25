@@ -5,15 +5,12 @@ import "./travel.css";
 const Travel = () => {
   const serviceKey = process.env.REACT_APP_DAEJEON_API_KEY;
   const [travelData, setTravelData] = useState([]);
-  const [hasMore, setHasMore] = useState(true); // Flag to indicate if there's more data
+  const [hasMore, setHasMore] = useState(true); // 데이터 확인
   const [loading, setLoading] = useState(false);
   const numOfRows = 10;
   const loader = useRef(null);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
+  // Observer
   useEffect(() => {
     const observer = new IntersectionObserver(handleObserver, {
       root: null,
@@ -28,10 +25,10 @@ const Travel = () => {
         observer.unobserve(loader.current);
       }
     };
-  }, [travelData]); // Observe changes in travelData to handle reaching the end
+  }, [travelData]);
 
   const fetchData = async () => {
-    if (loading || !hasMore) return; // Prevent fetching if already loading or no more data
+    if (loading || !hasMore) return;
     setLoading(true);
     try {
       const pageNo = Math.min(travelData.length / numOfRows + 1, 14); // Limit pageNo to 14
@@ -41,7 +38,7 @@ const Travel = () => {
       console.log(`num ===============${pageNo}`);
       const newTravelData = response.data.response.body.items;
       setTravelData((prevData) => [...prevData, ...newTravelData]);
-      setHasMore(newTravelData.length === numOfRows && pageNo < 14); // Check if there's more data based on response length and pageNo limit
+      setHasMore(newTravelData.length === numOfRows && pageNo < 14);
     } catch (error) {
       console.error("Error fetching data:", error);
     } finally {
@@ -57,26 +54,28 @@ const Travel = () => {
   };
 
   return (
-    <div className="data-wrap">
-      {travelData.slice(0, 140).map(
-        (
-          data,
-          index // Limit displayed data to 140 items
-        ) => (
-          <div key={index}>
-            <h1>{data.tourspotNm}</h1>
-            <p>{data.tourspotSumm}</p>
-            <p>{data.tourspotAddr}</p>
-            <p>{data.mngTime}</p>
-            <p>{data.refadNo}</p>
-            <p>{data.pkgFclt === "" ? "" : `주차 : ${data.pkgFclt}`}</p>
-            <br />
-          </div>
-        )
-      )}
-      <div ref={loader}>{loading && "Loading..."}</div>
-      {!hasMore && <div>No more data to display.</div>}
-    </div>
+    <>
+      <div className="data-wrap">
+        {travelData.slice(0, 140).map(
+          (
+            data,
+            index // Limit displayed data to 140 items
+          ) => (
+            <div key={index}>
+              <h1>{data.tourspotNm}</h1>
+              <p>{data.tourspotSumm}</p>
+              <p>{data.tourspotAddr}</p>
+              <p>{data.mngTime}</p>
+              <p>{data.refadNo}</p>
+              <p>{data.pkgFclt === "" ? "" : `주차 : ${data.pkgFclt}`}</p>
+              <br />
+            </div>
+          )
+        )}
+        <div ref={loader}>{loading && "Loading..."}</div>
+        {!hasMore && <div>No more data to display.</div>}
+      </div>
+    </>
   );
 };
 
