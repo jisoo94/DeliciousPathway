@@ -28,14 +28,24 @@ const Food = () => {
     setCurrentPage((prevPage) =>
       Math.min(prevPage + 1, Math.ceil(foods.length / foodsPerPage))
     );
+    scrollToTop();
   };
 
   const prevPage = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+    scrollToTop();
   };
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
+    scrollToTop();
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // 부드러운 스크롤 효과 적용
+    });
   };
 
   // 전체 페이지 수 계산

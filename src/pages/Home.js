@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 import Carousels from "../components/Carousels/Carousels";
 import Contact from "../components/Contact/Contact";
@@ -8,7 +9,6 @@ import fall from "../assets/travels/fall.jpg";
 import food from "../assets/travels/food.jpg";
 import ocean from "../assets/travels/ocean.jpg";
 import seoul from "../assets/travels/seoul.jpg";
-import ScrollToTopButton from "../components/Utils/ScrollToTopButton";
 
 const Home = () => {
   return (
@@ -26,7 +26,9 @@ const Home = () => {
             만들어보세요.
           </p>
           <br />
-          <p className="more">더보기</p>
+          <p className="more">
+            <Link to={"/food"}>더보기</Link>
+          </p>
         </div>
       </div>
       {/* <Carousels showCarousel={false} /> */}
@@ -34,7 +36,9 @@ const Home = () => {
       <div className="card_main">
         <div className="card_title">
           <h1>여행지 추천 목록</h1>
-          <p className="more">더보기</p>
+          <p className="more">
+            <Link to={"/travel"}>더보기</Link>
+          </p>
         </div>
         <div className="card_item">
           <Card
