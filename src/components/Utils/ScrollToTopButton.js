@@ -1,5 +1,6 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 class ScrollToTopButton extends React.Component {
   state = {
     isTopVisible: false, // 탑 버튼이 화면에 보이는지 여부를 상태로 관리
@@ -36,13 +37,13 @@ class ScrollToTopButton extends React.Component {
         style={{
           display: isTopVisible ? "block" : "none",
           border: isTopVisible ? "1px solid black" : "0px",
-          borderRadius: isTopVisible ? "16px" : "0px",
-          padding: isTopVisible ? "5px" : "0px",
+          borderRadius: isTopVisible ? "10px" : "0px",
+          padding: isTopVisible ? "10px" : "0px",
           backgroundColor: "transparent",
         }}
         onClick={this.handleClick}
       >
-        Top Button
+        <FontAwesomeIcon icon={faArrowUp} />
       </button>
     );
   }
