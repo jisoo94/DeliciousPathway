@@ -1,4 +1,4 @@
-.doc_footer {
+.doc-footer {
   border-top: 1px solid var(--border-grey-color);
   margin-bottom: 30px;
   padding: 10px;
@@ -6,15 +6,21 @@
   background-color: var(--brown-color);
 }
 
-.wrap_info {
+.wrap-info {
   display: inline-flex;
   margin-top: 50px;
   padding-right: 20px;
-  text-decoration: none;
-  color: red;
 }
 
 .footer-link {
   color: #252525;
-  text-decoration: none;
+}
+
+/* For medium devices */
+@media screen and (max-width: 600px) {
+  .wrap-info {
+    display: block;
+    margin: 10px;
+    padding: 0px;
+  }
 }

@@ -1,4 +1,4 @@
-.carousel__main {
+.carousel-main {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -7,12 +7,12 @@
   /* height: 300px; */
 }
 
-/* .carousel__contents {
+/* .carousel-contents {
   width: 50%;
   height: auto;
 } */
 
-/* .carousel__image {
+/* .carousel-image {
   height: auto;
 } */
 

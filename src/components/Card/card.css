@@ -5,15 +5,15 @@
   text-align: center;
   margin: 30px;
 }
-.img_fix {
+.img-fix {
   height: auto;
 }
-.card_img {
+.card-img {
   height: 200px;
   width: 200px;
 }
 
-.card_text {
+.card-text {
   height: 150px;
 }
 
@@ -30,7 +30,7 @@
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
-  .card_text {
+  .card-text {
     height: auto;
   }
 }

@@ -14,7 +14,7 @@ const Food = () => {
         const response = await axios.get(
           `https://seoul.openapi.redtable.global/api/food/img?serviceKey=${API_KEY}`
         );
-        console.log(response.data.body);
+        // console.log(response.data.body);
         setFoods(response.data.body);
       } catch (error) {
         console.error("Error fetching data:", error);

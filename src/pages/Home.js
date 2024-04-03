@@ -13,9 +13,9 @@ import seoul from "../assets/travels/seoul.jpg";
 const Home = () => {
   return (
     <div className="mainHome">
-      <div className="food_main">
+      <div className="food-main">
         <Carousels showCarousel={true} />
-        <div className="food_text">
+        <div className="food-text">
           <h1>맛있는 여행의 시작</h1>
           <p>
             여행의 매력은 새로운 곳에서의 맛있는 음식을 맛보는 것입니다. 특별한
@@ -33,14 +33,14 @@ const Home = () => {
       </div>
       {/* <Carousels showCarousel={false} /> */}
 
-      <div className="card_main">
-        <div className="card_title">
+      <div className="card-main">
+        <div className="card-title">
           <h1>여행지 추천 목록</h1>
           <p className="more">
             <Link to={"/travel"}>더보기</Link>
           </p>
         </div>
-        <div className="card_item">
+        <div className="card-item">
           <Card
             img={food}
             title={"전통 시장 음식"}

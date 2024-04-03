@@ -7,14 +7,14 @@ import travelData from "../../assets/data/travelData";
 
 const renderSlides = imageData.map((image) => (
   <div key={image.alt}>
-    <img src={image.url} alt={image.alt} className="carousel__image" />
+    <img src={image.url} alt={image.alt} className="carousel-image" />
     {/* <p>{image.label}</p> */}
   </div>
 ));
 
 const renderTravelSlides = travelData.map((image) => (
   <div key={image.alt}>
-    <img src={image.url} alt={image.alt} className="carousel__image" />
+    <img src={image.url} alt={image.alt} className="carousel-image" />
     {/* <p>{image.label}</p> */}
   </div>
 ));
@@ -27,7 +27,7 @@ const Carousels = (props) => {
   }
 
   return (
-    <div className="carousel__main">
+    <div className="carousel-main">
       <Carousel
         showArrows={true}
         showStatus={false}
@@ -39,7 +39,7 @@ const Carousels = (props) => {
         }
         onChange={handleChange}
         // centerMode={true}
-        className="carousel__contents"
+        className="carousel-contents"
       >
         {showCarousel ? renderSlides : renderTravelSlides}
       </Carousel>

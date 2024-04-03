@@ -46,15 +46,15 @@ const Weather = () => {
   };
 
   return (
-    <div className="weather_container">
+    <div className="weather-container">
       {weather ? (
-        <div className="weather_item">
-          <div className="h2_item">
+        <div className="weather-item">
+          <div className="h2-item">
             <h2>{cityName}</h2>
           </div>
           <p>{weather.description}</p>
           <p>{weather.temp} °C</p>
-          <img className="weather_img" src={weather.icon} alt="Weather Icon" />
+          <img className="weather-img" src={weather.icon} alt="Weather Icon" />
         </div>
       ) : (
         <p>Loading...</p>

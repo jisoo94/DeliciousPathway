@@ -18,43 +18,43 @@ const Contact = () => {
   };
   return (
     <section className="contact section" id="contact">
-      <div className="contact__container">
-        <div className="contact__content">
-          <h3 className="contact__title">문의 글을 남겨주세요!</h3>
+      <div className="contact-container">
+        <div className="contact-content">
+          <h3 className="contact-title">문의 글을 남겨주세요!</h3>
 
-          <form ref={form} onSubmit={sendEmail} className="contact__form">
-            <div className="contact__form-div">
-              <label className="contact__form-tag">이름</label>
+          <form ref={form} onSubmit={sendEmail} className="contact-form">
+            <div className="contact-form-div">
+              <label className="contact-form-tag">이름</label>
               <input
                 type="text"
                 name="name"
-                className="contact__form-input"
+                className="contact-form-input"
                 placeholder=""
               />
             </div>
 
-            <div className="contact__form-div">
-              <label className="contact__form-tag">이메일</label>
+            <div className="contact-form-div">
+              <label className="contact-form-tag">이메일</label>
               <input
                 type="email"
                 name="email"
-                className="contact__form-input"
+                className="contact-form-input"
                 placeholder=""
               />
             </div>
 
-            <div className="contact__form-div contact__form-area">
-              <label className="contact__form-tag">내용</label>
+            <div className="contact-form-div contact-form-area">
+              <label className="contact-form-tag">내용</label>
               <textarea
                 name=""
                 cols="30"
                 rows="10"
-                className="contact__form-input"
+                className="contact-form-input"
                 placeholder=""
               ></textarea>
             </div>
 
-            <div className="button__main">
+            <div className="button-main">
               <button className="button">
                 보내기
                 {/* 이미지 추가 */}

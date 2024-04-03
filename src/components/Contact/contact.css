@@ -1,4 +1,4 @@
-.contact__container {
+.contact-container {
   display: flex;
   grid-template-columns: repeat(2, max-content);
   justify-content: center;
@@ -10,24 +10,24 @@
   background-color: white;
 }
 
-.contact__title {
+.contact-title {
   text-align: center;
   font-size: 25px;
   font-weight: 500;
   margin-bottom: 20px;
 }
 
-.contact__form {
+.contact-form {
   width: 360px;
 }
 
-.contact__form-div {
+.contact-form-div {
   position: relative;
   margin-bottom: var(--mb-2);
   height: 4rem;
 }
 
-.contact__form-input {
+.contact-form-input {
   position: absolute;
   top: 0;
   left: 0;
@@ -42,7 +42,7 @@
   z-index: 1;
 }
 
-.contact__form-tag {
+.contact-form-tag {
   position: absolute;
   top: -0.75rem;
   left: 1.25rem;
@@ -52,15 +52,15 @@
   z-index: 10;
 }
 
-.contact__form-area {
+.contact-form-area {
   height: 11rem;
 }
 
-.contact__form-area textarea {
+.contact-form-area textarea {
   resize: none;
 }
 
-.button__main {
+.button-main {
   display: flex;
   justify-content: center;
 }
@@ -76,25 +76,25 @@
 /* BREAKPOINTS */
 /* For large devices */
 @media screen and (max-width: 992px) {
-  .contact__container {
+  .contact-container {
     column-gap: 3rem;
   }
 }
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
-  .contact__container {
+  .contact-container {
     grid-template-columns: 1fr;
     row-gap: 3rem;
   }
 
-  .contact__form {
+  .contact-form {
     margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .contact__form {
+  .contact-form {
     width: 100%;
   }
 }

@@ -1,4 +1,4 @@
-.food_main {
+.food-main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@
   margin-bottom: 40px;
 }
 
-.food_text {
+.food-text {
   margin-left: 30px;
   padding: 20px;
   display: block;
@@ -14,7 +14,7 @@
   width: 50%;
 }
 
-.card_main {
+.card-main {
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -22,7 +22,7 @@
   background-color: var(--white-color);
 }
 
-.card_title {
+.card-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 
-.card_item {
+.card-item {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -57,7 +57,7 @@
     font-size: var(--small-font-size);
   }
 
-  .card_item {
+  .card-item {
     display: block;
     /* justify-content: space-around; */
     /* align-items: center; */
@@ -68,14 +68,14 @@
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
-  .food_main {
+  .food-main {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     margin-bottom: 40px;
   }
 
-  .food_text {
+  .food-text {
     margin-left: 30px;
     padding: 20px;
     display: block;
@@ -86,7 +86,7 @@
     margin: 30px;
     padding: 20px;
   }
-  .card_item {
+  .card-item {
     display: flex;
     flex-direction: column;
   }

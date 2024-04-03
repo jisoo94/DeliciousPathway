@@ -33,7 +33,7 @@ class ScrollToTopButton extends React.Component {
 
     return (
       <button
-        id="top_btn"
+        id="top-btn"
         style={{
           display: isTopVisible ? "block" : "none",
           border: isTopVisible ? "1px solid black" : "0px",

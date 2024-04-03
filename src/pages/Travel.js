@@ -36,8 +36,8 @@ const Travel = () => {
       const response = await axios.get(
         `https://apis.data.go.kr/6300000/openapi2022/tourspot/gettourspot?serviceKey=${serviceKey}&pageNo=${pageNo}&numOfRows=${numOfRows}`
       );
-      console.log(`num ===============${pageNo}`);
-      console.log(response.data.response.body.items);
+      // console.log(`num ===============${pageNo}`);
+      // console.log(response.data.response.body.items);
       const newTravelData = response.data.response.body.items;
       setTravelData((prevData) => [...prevData, ...newTravelData]);
       setHasMore(newTravelData.length === numOfRows && pageNo < 14);

@@ -14,7 +14,7 @@ function App() {
   return (
     // <infoStateContext.Provider value={""}>
     <BrowserRouter>
-      <div className="container_box">
+      <div className="container-box">
         <NavBar />
         <div className="content">
           <Routes>
