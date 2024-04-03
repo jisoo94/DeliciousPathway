@@ -9,8 +9,11 @@ import fall from "../assets/travels/fall.jpg";
 import food from "../assets/travels/food.jpg";
 import ocean from "../assets/travels/ocean.jpg";
 import seoul from "../assets/travels/seoul.jpg";
+import usePageTitle from "../hooks/usePageTitle";
 
 const Home = () => {
+  usePageTitle("맛난길");
+
   return (
     <div className="mainHome">
       <div className="food-main">

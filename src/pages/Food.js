@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./food.css";
+import usePageTitle from "../hooks/usePageTitle";
 
 const Food = () => {
   const API_KEY = process.env.REACT_APP_SEOUL_API_KEY;
   const [foods, setFoods] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [foodsPerPage] = useState(12);
+  usePageTitle("맛집");
 
   useEffect(() => {
     const fetchData = async () => {

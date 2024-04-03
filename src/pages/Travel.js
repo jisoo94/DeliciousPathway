@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./travel.css";
+import usePageTitle from "../hooks/usePageTitle";
 
 const Travel = () => {
   const serviceKey = process.env.REACT_APP_DAEJEON_API_KEY;
@@ -10,6 +11,7 @@ const Travel = () => {
   const [loading, setLoading] = useState(false);
   const numOfRows = 10;
   const loader = useRef(null);
+  usePageTitle("여행지");
 
   // Observer
   useEffect(() => {
