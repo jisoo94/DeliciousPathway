@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
-import React from "react";
-import "./weather.css";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
+import "./weather.css";
 import weatherDescKo from "../../assets/data/weatherDescKo";
 import cityNames from "../../assets/data/cityName";
 
@@ -10,40 +9,40 @@ const Weather = () => {
   const [weather, setWeather] = useState(null);
   const [cityName, setCityName] = useState("");
 
+  const getWeather = useCallback(
+    async (lat, lon) => {
+      try {
+        const res = await axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+        );
+        const cityInfo = cityNames.find((city) => city[res.data.name]);
+        setCityName(cityInfo ? Object.values(cityInfo)[0] : res.data.name);
+        const weatherId = res.data.weather[0].id;
+        const weatherKo = weatherDescKo.find((weather) => weather[weatherId]);
+        const weatherDesc = weatherKo ? Object.values(weatherKo)[0] : "Unknown";
+        const weatherIcon = res.data.weather[0].icon;
+        const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
+        const temp = Math.round(res.data.main.temp);
+        setWeather({
+          description: weatherDesc,
+          name: cityName,
+          temp: temp,
+          icon: weatherIconAdrs,
+        });
+      } catch (e) {
+        console.log(e);
+      }
+    },
+    [API_KEY, cityName]
+  );
+
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
       getWeather(lat, lon);
     });
-  }, []);
-
-  const getWeather = async (lat, lon) => {
-    try {
-      const res = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
-      );
-      // setCityName(res.data.name);
-      const cityInfo = cityNames.find((city) => city[res.data.name]);
-      setCityName(cityInfo ? Object.values(cityInfo)[0] : res.data.name);
-      const weatherId = res.data.weather[0].id;
-      const weatherKo = weatherDescKo.find((weather) => weather[weatherId]);
-      const weatherDesc = weatherKo ? Object.values(weatherKo)[0] : "Unknown";
-      const weatherIcon = res.data.weather[0].icon;
-      const weatherIconAdrs = `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`;
-
-      const temp = Math.round(res.data.main.temp);
-
-      setWeather({
-        description: weatherDesc,
-        name: cityName,
-        temp: temp,
-        icon: weatherIconAdrs,
-      });
-    } catch (e) {
-      console.log(e);
-    }
-  };
+  }, [getWeather]);
 
   return (
     <div className="weather-container">

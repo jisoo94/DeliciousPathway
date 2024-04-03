@@ -15,47 +15,48 @@ const Travel = () => {
 
   // Observer
   useEffect(() => {
+    const fetchData = async () => {
+      if (loading || !hasMore) return;
+      setLoading(true);
+      try {
+        const pageNo = Math.min(travelData.length / numOfRows + 1, 14); // Limit pageNo to 14
+        const response = await axios.get(
+          `https://apis.data.go.kr/6300000/openapi2022/tourspot/gettourspot?serviceKey=${serviceKey}&pageNo=${pageNo}&numOfRows=${numOfRows}`
+        );
+        // console.log(`num ===============${pageNo}`);
+        // console.log(response.data.response.body.items);
+        const newTravelData = response.data.response.body.items;
+        setTravelData((prevData) => [...prevData, ...newTravelData]);
+        setHasMore(newTravelData.length === numOfRows && pageNo < 14);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const handleObserver = (entities) => {
+      const target = entities[0];
+      if (target.isIntersecting && !loading) {
+        fetchData();
+      }
+    };
+
     const observer = new IntersectionObserver(handleObserver, {
       root: null,
       rootMargin: "20px",
       threshold: 1.0,
     });
-    if (loader.current) {
-      observer.observe(loader.current);
+    const currentLoader = loader.current;
+    if (currentLoader) {
+      observer.observe(currentLoader);
     }
     return () => {
-      if (loader.current) {
-        observer.unobserve(loader.current);
+      if (currentLoader) {
+        observer.unobserve(currentLoader);
       }
     };
-  }, [travelData]);
-
-  const fetchData = async () => {
-    if (loading || !hasMore) return;
-    setLoading(true);
-    try {
-      const pageNo = Math.min(travelData.length / numOfRows + 1, 14); // Limit pageNo to 14
-      const response = await axios.get(
-        `https://apis.data.go.kr/6300000/openapi2022/tourspot/gettourspot?serviceKey=${serviceKey}&pageNo=${pageNo}&numOfRows=${numOfRows}`
-      );
-      // console.log(`num ===============${pageNo}`);
-      // console.log(response.data.response.body.items);
-      const newTravelData = response.data.response.body.items;
-      setTravelData((prevData) => [...prevData, ...newTravelData]);
-      setHasMore(newTravelData.length === numOfRows && pageNo < 14);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleObserver = (entities) => {
-    const target = entities[0];
-    if (target.isIntersecting && !loading) {
-      fetchData();
-    }
-  };
+  }, [travelData, loading, serviceKey, hasMore, numOfRows]);
 
   return (
     <>

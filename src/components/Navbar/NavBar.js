@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <nav className="navBar">
       <div className="nav-logo">
-        <img src={logo} />
+        <img src={logo} alt="logo" />
         <p>
           <Link className="nav-title" to="/">
             맛난길
